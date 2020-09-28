@@ -1,8 +1,8 @@
-FROM buildpack-deps:stable-curl
+FROM buildpack-deps:stretch-curl
 MAINTAINER Manfred Touron <m@42.am> (https://github.com/moul)
 
 # Install deps
-RUN set -x; echo "Starting image build for Debian Stable" \
+RUN set -x; echo "Starting image build for Debian Stretch" \
  && dpkg --add-architecture arm64                      \
  && dpkg --add-architecture armel                      \
  && dpkg --add-architecture armhf                      \
@@ -21,7 +21,7 @@ RUN set -x; echo "Starting image build for Debian Stable" \
         binutils-multiarch                             \
         binutils-multiarch-dev                         \
         build-essential                                \
-	ccache                                         \
+        ccache                                         \
         clang                                          \
         crossbuild-essential-arm64                     \
         crossbuild-essential-armel                     \
