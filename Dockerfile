@@ -1,8 +1,8 @@
-FROM buildpack-deps:stretch-curl
+FROM buildpack-deps:buster-curl
 MAINTAINER Manfred Touron <m@42.am> (https://github.com/moul)
 
 # Install deps
-RUN set -x; echo "Starting image build for Debian Stretch" \
+RUN set -x; echo "Starting image build for Debian buster" \
  && dpkg --add-architecture arm64                      \
  && dpkg --add-architecture armel                      \
  && dpkg --add-architecture armhf                      \
